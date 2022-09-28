@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>movies</title>
+  </head>
+  <body onload="getMovies(event)">
+    <h1>Movies</h1>
+    <form
+      onsubmit="event.preventDefault();onsubmitHandler(event)"
+      method="post"
+    >
+      <label for="movieName">Name</label>
+      <input
+        type="text"
+        placeholder="enter movie name"
+        name="movieName"
+      /><br />
+      <label for="movieYear">Year</label>
+      <input
+        type="text"
+        placeholder="enter release year"
+        name="movieYear"
+        min="1900"
+        max="2100"
+        maxlength="4"
+      /><br />
+      <label for="movieRatings">Ratings</label>
+      <input
+        name="movieRatings"
+        type="number"
+        placeholder="enter ratings"
+        min="0"
+        max="10"
+        step="0.1"
+      /><br />
+      <input type="submit" name="submit" />
+    </form>
+    <div>
+      <ul>
+        <li id="display"></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    var movies = [];
+
+    function getMovies(reload) {
+      if (reload || movies.length == 0) {
+        fetch("http://localhost:3000/movies", {
+          mode: "cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            movies = data;
+            console.log("api called ");
+            displayMovies();
+          })
+          .catch((err) => {
+            displayError({ err: err, message: "internal server error" });
+          });
+      }
+    }
+
+    function addNewMovie(newMovie) {
+      fetch("http://localhost:3000/movies", {
+        mode: "cors",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+        method: "post",
+        body: JSON.stringify(newMovie),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("api added " + data.message);
+          getMovies(true);
+        })
+        .catch((err) => {
+          displayError({ err: err, message: "internal server error" });
+        });
+    }
+
+    function displayMovies() {
+      if (movies.length != 0) {
+        document.getElementById("display").innerHTML = "";
+        movies.map((movie) => {
+          document.getElementById(
+            "display"
+          ).innerHTML += ` movie Name :${movie.name} <br> movie Year:${movie.year} <br> movie Rating:${movie.rating} <br><br>`;
+        });
+      } else {
+        document.getElementById("display").innerHTML = "No movies to display";
+      }
+    }
+
+    function displayError(err) {
+      document.getElementById("display").innerHTML = err.message;
+    }
+
+    function onsubmitHandler(event) {
+      console.log("handled request");
+      var newId = movies[movies.length - 1].id + 1;
+      var newMovie = {
+        name: event.target[0].value,
+        year: Number(event.target[1].value),
+        rating: Number(event.target[2].value),
+      };
+      addNewMovie(newMovie);
+    }
+  </script>
+</html>
