@@ -1,0 +1,35 @@
+online js compiler : https://www.programiz.com/javascript/online-compiler/
+oops in js : https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/
+node js : https://www.geeksforgeeks.org/nodejs/
+crypto module - https://fireship.io/lessons/node-crypto-examples/
+best js video channel : https://www.youtube.com/watch?v=2WJL19wDH68
+jwt : https://www.simplilearn.com/tutorials/nodejs-tutorial/jwt-authentication
+interview qs node js : https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+promises : https://www.javascripttutorial.net/es6/javascript-promises/
+monolith to micro service - https://get.interviewready.io/blog/monoliths-to-microservices
+system design - https://get.interviewready.io/blog/instagram-feed
+security steps - https://blog.sqreen.com/nodejs-security-best-practices/
+dynamodb - https://www.ryanjyost.com/node-dynamodb-intro-tutorial/
+angular crash - https://www.youtube.com/watch?v=3dHNOWTI7H8  
+angular interview - https://www.simplilearn.com/tutorials/angular-tutorial/angular-interview-questions
+REST - https://blog.hubspot.com/website/what-is-rest-api
+JAVA tutorial - https://www.javatpoint.com/internal-details-of-hello-java-program
+https://intellipaat.com/blog/interview-question/node-js-interview-questions/
+repeated js interview qs - https://blog.risingstack.com/javascript-interview-questions/
+node-js tutorial simple way - https://blog.risingstack.com/node-hero-node-js-security-tutorial/
+js imp topics - https://www.youtube.com/watch?v=Ypp64J5KAKA
+solid principles - https://www.xenonstack.com/blog/solid-principles-javascript 
+// https://duncan-mcardle.medium.com/solid-principle-2-open-closed-javascript-fc49b577a377
+authentication -auth https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization/
+https://www.janbasktraining.com/blog/oracle-vs-sql-server-vs-mysql/
+https://blog.logrocket.com/axios-vs-fetch-best-http-requests/
+js- https://www.geeksforgeeks.org/why-javascript-is-a-single-thread-language-that-can-be-non-blocking/
+node-js : https://www.geeksforgeeks.org/why-node-js-is-a-single-threaded-language/?ref=rp
+js-async : https://www.youtube.com/watch?v=Q-Zmc0E0GYY
+node js async - https://www.youtube.com/watch?v=jOupHNvDIq8
+mongodb- https://www.tutorialspoint.com/mongodb/index.htm
+fetch/axios- https://blog.logrocket.com/axios-vs-fetch-best-http-requests/
+dynamoDb- https://dynobase.dev/dynamodb-nodejs/
+sql/nosql- https://www.red-gate.com/simple-talk/databases/nosql/how-to-choose-between-sql-and-nosql-databases/
+sql- https://www.w3schools.com/sql/sql_null_values.asp
+https://stackabuse.com/insertion-sort-in-javascript/

@@ -1,0 +1,88 @@
+MVC(model view controller)
+view.html
+web request :www.akk.life/login
+username:palani
+password:palani123
+login success welcome kali
+login failure please check username password or register again
+
+
+server
+package request :{username:kali,password:kali123}
+request.username
+request.password 
+
+service.java controller
+/login
+ErrResponse={message:"error enter username or password"}
+successResponse={message:"login success"}
+loginErrResponse={message:"invalid credentials please check username and password"}
+String username = request.username;
+String password = request.password;
+if( username && password ){
+	Login l1=new Login(username,password)
+        String response=loginUser(l1);
+	if(response === "success")
+	return successResponse
+	else
+	return LoginErrResponse
+}else{
+	return ErrResponse;
+}
+
+/register
+ErrResponse={message:"error enter username or password"}
+String username = request.username;
+String password = request.password;
+if( username && password ){
+	Login l1=new Login(username,password)
+        registerUser(l1)
+}else{
+	return ErrResponse
+}
+
+Model
+class Login{
+ private username;
+ private password;
+Login(String uname,String password){
+this.username=uname;
+this.password=password;
+}
+
+
+}
+
+db.java
+string registerUser(Login l1){
+
+insert into register  (username,password) values (li.username,li.password)
+
+//db.save(l1)
+  
+}
+
+String loginUser(Login l1){
+//db.get(Login l1)
+Int result=select username,password from register where username=l1.username
+if(result == 1 && password === l1.password){
+	return "success"
+}else{
+	return "failure"
+}
+
+
+}
+
+
+
+db
+
+SQL
+
+
+Database - customers
+table register
+uid username   password 
+    -------------------
+ 1   kali	   kali123  

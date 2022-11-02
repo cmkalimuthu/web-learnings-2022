@@ -1,0 +1,77 @@
+Required Skills
+
+    Proficiency in creating web applications and RESTful APIs.
+    Strong experience in Node.js and Express Framework.
+    Experience in code architecture in terms of high-performance, scalable & security with aminimal footprint.
+    Experience in JEST/Jasmine unit test framework & knowledge in TDD approach.
+    Experience working in NoSQL and MYSQL databases is required.
+    Experience in ORM like Mongoose, Socket Programming, KAFKA, ElasticSearch, etc..
+    Cloud Architectural knowledge of Serverless, Storage, and CDN is an added advantage.
+    Experience in Docker is an added advantage.
+    Experience in Designing Microservice Architectures.
+    Proficient understanding of code versioning tools, such as Git/Bitbucket.
+    Developing secure Node.js endpoints using JWT, OAuth, SAML added advantage.
+
+Key Responsibilities
+
+    Willingness to learn and adapt fast to new technologies.
+    Ability to work in cross-functional project organization.
+    Building reusable components and front-end libraries for future use.
+    Implementing automated testing platforms and unit tests.
+    Good Linux administration skills, with strong experience in shell scripts.
+    Git version control system.
+    Able to work within a team development environment.
+    Good in communication and a go-getter attitude.
+    Willingness to learn and adapt fast to new technologies.
+    Ability to work in cross functional project organization.
+
+
+Developing microservices using Express and Node JS Experience s, Design solutions for enterprise applications with best practices Experience in developing responsive UI applications using React/Angular
+serverless or micro-services 5 Experience with AWS or Azure or Google cloud technologies
+Experience/Exposure in MEAN Stack is an added advantage
+Experience with designing RESTful API based services.
+Expertise in microservices architecture.
+Understanding of front-end technologies, such as HTML5 CSS3 and JS frameworks like Angular 2+ or React Js would be a plus.
+Experience in Cloud platform would be a plus (AWS / GCP).
+Experience with performing QA tests alongside development
+Basic knowledge of frontend frameworks such as Angular & React
+Ability to in a DevOps automated environment.
+Experience cloud technologies e. g. Azure, GCP, AWS
+Node JS, MongoDB, REST APIs, Microservices.
+Proficient in Nodejs & MongoDB.
+Hands-onCoding experience.
+Micro Services Architecture.
+REST API Development.
+REST API documentation tool using swagger.
+Proficiency in REST APIs, JSON, and API development
+Identify errors in code and troubleshoot them
+Perform usability and performance testing on web applications
+Minimum 1 year of hands-on experience in Node.js stack.
+Knowledge of how to build, use & document RESTful APIs.
+Strong knowledge of version control.
+Strong database skills.
+    Experience deploying Node.js applications into production.
+    Ability to implement & work with sockets programming.
+    Knowledge of Amazon Web Services (AWS) infrastructure, and project deployment with the pipeline.
+    Knowledge of Redis is a plus.
+
+Good to have:
+
+    Experience with AWS.
+    Experience with CI/CD tools.
+Can learn and adapt fast, as well as identify and solve problems
+Must be aware of Lambda, EC2, S3, API Gateways, setting up service endpoints,
+
+CloudFront, CloudWatch (these are few basic services that are used under AWS very highly so the combination of the same should be available)
+Candidate should be willing to learn new technologies based on project reqrueiments
+Candidate should have good technical experience in building applications using Angular, Serverless
+candidate should be very familiar with angular js, nodejs, AWS and is strongly interested in learning cloud knowledge cross cloud provider, like AWS/Azure/GCP
+Willing to try new things, not afraid to fail, learn from failures and grow. Verbal & non-verbal communication skills Skills:- MongoDB, Mongoose, Express, NodeJS (Node.js), TypeScript, React.js, AWS Lambda, AWS Simple Notification Service (SNS) and AWS Simple Queuing Service (SQS)
+Need have knowledge on REST API and MVC, Unit testing frameworks like Mocha/Chai Knowledge in React JS, JavaScript, Typescript, CSS and HTML5, Reactjs workflows
+ Strong proficiency with JavaScript
+Good knowledge of HTML5 and CSS3
+Understanding of JavaScript libraries and frameworks ReactJS
+
+Excellent communication skills.
+Curios, Self-motivated and eager to learn.
+Good team player with good interpersonal skills.

@@ -1,0 +1,410 @@
+https://replit.com/@Codevolution/JavaScript-Data-Structures#binary-search-tree.js
+//cartesion product
+// var arr1=[1,2];
+// var arr2=[1,2,3];
+// var arr3=[];
+// function cartesian(arr1,arr2){
+// for(let i=0;i<arr1.length;i++)
+//     for(let j=0;j<arr2.length;j++)
+//         arr3.push([arr1[i],arr2[j]])
+
+// return arr3;
+// }
+// document.write("final set "+cartesian(arr1,arr2)+" length of set "+arr3.length)
+
+//tower of hanoi
+// function tower(n,from,to,using){
+//     if(n==0){
+//         //console.log("The disk 1 is moved from "+from+" to "+to)
+//         return;
+//     }
+//     tower(n-1,from,using,to)
+//     console.log("The disk "+n+" is moved from "+from+" to "+to)
+//     tower(n-1,using,to,from)
+    
+// }
+
+// tower(3,'A','C','B')
+
+//staircase problem
+// function staircase(n){
+//     const noOf=[1,2]
+//     for(var i=2;i<=n;i++)
+//         noOf[i]=noOf[i-1]+noOf[i-2]
+        
+//     return noOf[i-1]
+// }
+
+// console.log("case : "+staircase(1))
+// console.log("case : "+staircase(2))
+// console.log("case : "+staircase(3))
+// console.log("case : "+staircase(4))
+
+
+
+
+
+console.log("linked list");
+class Node{
+    constructor(value){
+        this.value=value;
+        this.next=null;
+    }
+}
+
+class LinkedList{
+    constructor(){
+        this.size=0;
+        this.head=null;
+    }
+    
+    isEmpty(){
+        return this.size === 0;
+    }
+    
+    getSize(){
+        return this.size;
+    }
+    
+    prepend(value){
+        const node = new Node(value)
+        if(this.isEmpty()){
+            this.head=node;
+        }else{
+            node.next=this.head
+            this.head=node;
+        }
+        this.size+=1;
+        return value;
+        
+    }
+    
+    append(value){
+        const node=new Node(value);
+        if(this.isEmpty()){
+            this.head=node;
+        }else{
+            let pre=this.head;
+            while(pre.next){
+                pre=pre.next;
+            }
+            pre.next=node;
+        }
+            this.size+=1;
+            return value;
+            
+    }
+    
+    insert(index,value){
+        if(index<0)
+         return null;
+        if(index == 0){
+            this.append(value)
+        }else{
+            const node = new Node(value)
+            let prev=this.head;
+            for(let i=0;i<index-1;i++){
+                
+                prev=prev.next;
+            }
+            node.next=prev.next;
+            prev.next=node;
+            this.size++;
+            return value
+            
+        }
+        
+    }
+    
+    remove(index){
+        if(this.isEmpty() || index <0 || index>this.size ){
+            console.log("list is empty or invalid index!")
+            return null;
+        }
+        let removeValue;
+        if(index == 0){
+            removeValue=this.head;
+            this.head=removeValue.next;
+            this.size--;
+            return removeValue;
+        }
+        if(index == 0 && this.size == 1){
+            removeValue=this.head.value;
+            this.head=null;
+            
+        }else{
+            let prev=this.head;
+            for(let i=0;i<index-1;i++){
+                prev=prev.next;
+            }
+            removeValue=prev.next;
+            prev.next=removeValue.next;
+            
+        }
+        this.size--;
+        return removeValue.value;
+        
+    }
+    
+    print(){
+        if(this.isEmpty()){
+            console.log('list is empty')
+        }
+        let str='';
+        let cur=this.head;
+        while(cur){
+            str+=`${cur.value} `
+            cur=cur.next;
+        }
+       console.log(str)
+    }
+}
+
+const list=new LinkedList();
+console.log(list.isEmpty())
+list.prepend(20)
+list.append(30)
+list.prepend(10)
+list.prepend(5)
+list.append(40)
+console.log(list.getSize())
+list.print()
+list.insert(2,15)
+list.print()
+list.remove(0)
+list.print()
+console.log(list.getSize())
+
+
+
+
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Welcome to Programiz!");
+
+class Node{
+    constructor(value){
+        this.value=value;
+        this.left=null;
+        this.right=null;
+    }
+}
+
+class BTS{
+    constructor(){
+        this.root=null;
+    }
+    isEmpty(){
+        return this.root == null;
+    }
+    insert(value){
+        const node=new Node(value);
+        if(this.isEmpty()){
+            this.root=node;
+        }else{
+            this.insertNode(this.root,node)
+        }
+        //console.log(this.root)
+    }
+    
+    insertNode(root,node){
+        if(node.value < root.value){
+           if(root.left == null){
+               root.left=node;
+           }else{
+               this.insertNode(root.left,node)
+           } 
+        }else{
+            if(root.right == null){
+               root.right=node;
+           }else{
+               this.insertNode(root.right,node)
+           } 
+        }
+        
+    }
+    
+    search(root,value){
+        if(!root){
+            return false;
+        }else{
+            if(root.value == value){
+            return true;
+            }else if(root.value > value){
+                return this.search(root.left,value)
+            }else{
+                return this.search(root.right,value)
+            }   
+        }
+    }
+    
+    min(root){
+        if(!root.left){
+            return root.value
+        }else{
+            return this.min(root.left)
+        }
+    }
+    max(root){
+        if(!root.right){
+            return root.value
+        }else{
+            return this.min(root.right)
+        }
+    }
+    
+    preOrder(root){
+        if(root){
+            console.log(root.value+'\n');
+            this.preOrder(root.left)
+            this.preOrder(root.right)
+        }
+    }
+    inOrder(root){
+        if(root){
+            this.inOrder(root.left)
+            console.log(root.value);
+            this.inOrder(root.right)
+        }
+    }
+    
+     postOrder(root){
+        if(root){
+            this.postOrder(root.left)
+            this.postOrder(root.right)
+            console.log(root.value);
+        }
+    }
+}
+
+
+const bts=new BTS();
+bts.insert(10)
+bts.insert(15)
+bts.insert(5)
+bts.insert(7)
+bts.insert(3)
+
+console.log(bts.search(bts.root,11))
+console.log(bts.min(bts.root))
+console.log(bts.max(bts.root))
+
+bts.preOrder(bts.root)
+bts.inOrder(bts.root)
+bts.postOrder(bts.root)
+
+
+
+
+
+js 2022
+
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+/*console.log("example for closure");
+function outer(){
+    let counter=0;
+    function inner(){
+        counter++;
+        console.log(counter);
+    }
+    return inner;
+}
+let ir = outer()
+ir()
+ir()
+ir()
+*/
+/*console.log("example for curring");
+function curry(fn){
+    return function(a){
+        return function(b){
+            return function(c){
+                return fn(a,b,c)
+            }
+        }
+    }
+}
+function sum(...a){
+    let total=0;
+    for(let i of a)
+        total+=i
+    return total
+}
+
+let summ=curry(sum)
+console.log(summ(2)(3)(5))
+*/
+
+console.log("example for this")
+//implicit
+const person ={
+    name:'kali',
+     sayMyName(){
+        console.log(`my name is ${this.name}`)
+    }
+}
+
+//explicit binding
+function person1(){
+    console.log(`my name is ${this.name}`)
+}
+
+//new binding
+function Person(name){
+    this.name=name
+ 
+}
+
+//const p1=person.sayMyName()
+//const p2=person1.call(person)
+// const p1=new Person('kali')
+// const p2=new Person('kumar')
+// console.log(p1.name+" "+p2.name)
+// const name="superman"
+//default will take global this ref
+//person1()
+
+
+console.log('prototype')
+//constructor fun
+function Person(fname,lname){
+    this.fname=fname;
+    this.lname=lname
+}
+Person.prototype.getName=function(){
+    console.log(`${this.fname} ${this.lname} `)
+}
+
+function SuperHero(fname,lname){
+    //Person.call(this,fname,lname)
+    this.superHero=true
+}
+
+SuperHero.prototype.getFight=function(){
+    console.log('hero fighting crimes')
+}
+SuperHero.prototype=Object.create(Person.prototype)
+SuperHero.prototype.constructor=SuperHero
+const p1=new Person('kali','muthu')
+const hero=new SuperHero('bruce','wayne')
+
+
+p1.getName()
+hero.getName()
+
+
+
+
+
+
+
+
+    
+    

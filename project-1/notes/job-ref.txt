@@ -1,0 +1,9 @@
+Excellent computer systems fundamentals, DS/Algorithms and problem solving skills.
+Hands on experience in Microservices, RESTful webservices development in NodeJS.
+Exposure to Cloud (AWS/Azure/GCP), CICD, Docker & Kubernetes, GQL, Any scripting, SQL/NoSQL databases (Cassandra).
+Netflix, Uber, LinkedIn, NASA, PayPal, Microsoft and Walmart.
+https://devskiller.com/node-js-developer-skills/
+https://resumeworded.com/node-js-resume-examples
+UPDATE table SET gender = CASE gender WHEN 'Male' THEN 'Female' WHEN 'Female' THEN 'Male' ELSE gender END; 
+https://in.indeed.com/career-advice/interviewing/managerial-round-interview-questions
+https://www.interviewbit.com/hr-interview-questions/

@@ -1,0 +1,22 @@
+1.LabCorp:
+Time:45 min ,
+basic : frontEnd,backend,database,project,situation,social activities,js programs,angular,testing,typescript,cloud,Rest,apis
+
+const arr=['red','green','blue','purple', 'orange']
+
+const check=(arr)=>{
+    const resp=arr.filter(value=>{ return !value.includes('r') })
+return resp;
+}
+console.log(check(arr))
+
+cloud vs onPremise
+databases
+apis Rest
+css,angular databindings ,testing
+htmls elements
+css and bootsrtap,
+js codes
+project difficulties
+social activities
+salary 7

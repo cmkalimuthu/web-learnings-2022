@@ -1,0 +1,178 @@
+REVISION TOPICS
+------------------ 
+*string number object array boolean undefined null
+* typeof gives the data type ,instanceOf checks the object type
+* valueof converts object to primitive(in built)
+* primitive data type converted to objects when property and methods used
+* "===" returns always false for comparing two objects
+
+
+string methods & properties
+---------------------------
+*string methods always gives new string since string is immutable
+
+1.extraction
+ slice,substr,substring,split,padStart,padEnd,replace,length,charAt,charCodeAt,toString
+2.Search
+ indexOf,lastIndexOf,includes,startsWith,endsWith,match,search,
+
+Number methods & properties
+----------------------------
+-> toFixed,toPrecision,toExponential,Number,parseInt,parseFloat,MAX_VALUE,MIN_VALUE,POSITIVE_INFINITY,NEGATIVE_INFINITY,NaN
+
+Array property and methods
+-----------------------------
+*arrays are numbered index & objects are named index
+*JavaScript automatically converts an array to a comma separated string when a primitive value is expected
+
+1.sort
+-> length,push,pop,sort,forEach(()=>{}),toString,join,shift,unshift,delete,concat,splice(add),slice(rm),sort,reverse,numbers sort((a,b)=>{return a-b})
+Math.min.apply(null,arr),Math.max.apply(null,arr)
+
+2.iteration
+->forEach (modify old array),map(new arr),reduce,filter,reduce(myFunction, initial value for accumlator),reduceRight,reduceLeft,every(bool),some,indexOf,lastIndexOf
+find,findIndex,Array.from("abcdef"),keys(returns positions),entries(returns key/value pair),includes,
+
+
+random number
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+
+->set hold unique values
+add,delete,has,new Set(),forEach,values,size
+
+->maps hold key/value pair and remembers insertion order
+new Map(),set,get,delete,has,forEcah,entries,size
+
+JS concepts:
+-------------
+closure,currying,temporal dead zone,scope chain (lex+parent lex env),prototye,bind,call,apply
+coresion(convert same type ====),hoisting,(promise.all,promise.allSettled,promise.race,promise.any,pending,rejected,fullfiled,status,value),
+async/await,callback,cors,higherOrderFun,V8(code->parser AST(sbstract syntax tree)->JIT/interpreter->bytecode exec->memo heap->fn stack)
+child_process,spawn(stream),exec(buf),execFile(buf & file commands),fork(background parallelism),concurrency(context switch),parallalelsim(core)
+cluster,isMaster,fork,os.cpu,streams(using event emitters),fs.createReadStream,writeStream,pipe(inPutStream->outptStream),
+on(end,error,data,finish),zlib,gzip,gunzip,eventEmiters,on,emit,addListener,deleteListener,fun *generators(yield,next,value,done),
+destructuring,spread,rest,arrow,buffer(alloc,allocSafe,fill)
+
+redis(set,get,expire,flush)
+mongodb(create,find,update,use,show,insert,unset,set,cluster,shreds,collections)
+kafka(producer,consumer,broker,topic,message,cluster,partition,customerGroup,queue,pub/sub),orm,odm,
+
+test
+-----
+(unit->integration->e2e,mocha,chai,spies,sinon,stub,mock,coverage,istanbul,node-inspector,debug),symbol,
+
+
+crypto(create,update,digest,hash,salt),encapsulation,swagger,statuscode(200 success,400 client side,500 server),
+
+expressjs
+(mongoose,schema,model,save,find,findOne,findMany,updateOne,updateMany,urlParser,cookie-parser,json,urlEncoder,middleware,routes,jwt,sign,verify,socket,emit
+on,broadcast,leave,join,connect,disconnect,sendpug,session,internalstorage,passport,morgan,dotEnv)
+
+docker
+------
+(dockerFile,container,image,build,expose,dockerCompose.detach),kuerneties(minikube,pod,master,replicate,kubelet,service.yaml,deployment.yaml,kubectl)
+
+fetch
+------
+(url,options->{headers->{accept,content-type},authorization,body,resp.json()}),axios(url,headers,data)
+
+dynamoDb
+---------
+(createTable,keySchema,attributeDefinition,put,get,scan,delete,transactWrite,transactRead,query,batchWrite,batchRead,
+updateExpression,ExpressionAttributeName,values,conditionExpression,RequestItems,TransactRequest,LastEvaluatedKey,ExclusiveStartKey,Item,Key,TableName,KeyCoditionExpression)
+
+mongoDb
+-------
+(use,drop,show collectons,db,createCollections(),insert,insertOne,insertMany,find,findOne,pretty,lt,gt,eq,in,nin,and,or,update,save,updateMany,findAndUpadeOne,
+remove,limit,sort,skip,createIndex,dropIndex,getIndexes,replication,primary,secondary,election,replicates,sharding,config servers,query routers,shards )
+
+shell commands
+---------------
+(ls,pwd,cat,cd,mkdir,rmdir,chmod,chown,grep,wc,vi,vim,touch,pipe,ps,ping,telnet,ftp,sh,cp,mv,rm,du,df,curl)
+
+git
+----
+(config,help,clone,stage,log,add,commit,push,pull,remote,checkout,branch,merge,pr,revert,rebase,amend,repo,fork,master,history)
+
+agile
+------
+(project,epic,story,tasks,productOwner,scrum,sprint,scrum master,scrum team,user stories,kanbanBoard,toDo,inProgress,done,test,task,issues,JIRA,backlog,releases,work-flow)
+
+nodeJs modules
+--------------
+(assert,buffer,console,crypto,fs,dns,http,os,http2,events,queryString,globals,url,streams,path)
+
+jwt
+----
+(headers,payload,signing,authorization,user,sign,verify,expire,bearer-token,sha-256,secretkey,https->ssl,certificates,CA,in headers (cert,key,request-cert:true)
+privatekey,publickey,pem,CSR(certificate sign request))
+
+best practise
+-------------
+(inputValidation,santitizing,oAuth/own auth,2fa,bcrypt,no-reveal-err,loadbalcer,proxy,audit,code-quality-lint,logs,metrices,alarms,monitoring,no-config,get-required-data from db to clients)
+
+aws
+-----
+(network,security,storage,analytics,compute,databases,management,applications,on-demand,vpc,route53,apigw,eloadb,autoscaling,ec2,ebs,elcahce,rds,dynamodb,s3,rekignition,lambda,cloudfront
+edge location,kenisis,emapReducer,redshift,athena,quicksight,glue,iam,waf,kms,inspector,cloudwatch,trial,elk,sns,sqs,sem,cicd,cloudformation)
+
+angular
+--------
+(ui framework,google,typescript,build and execute,mvc,single page,app module,component,template,css,services,dependency injection,karmas/jasmine,aot,jit,cli,ng,
+databinding,eventbinding,form handling,pipes,decarators(annotaions),directives(attribute,structure,component),onChanges,onInit,onDoCheck,afterContentInit,contentChecked,viewInit,view
+Checked,destroy,routers,selectors,no virtual dom,less slower to react,size is high)
+
+React
+-----
+(js library,facebook,virtual dom,jsx,components,hooks,useState,ref,context,effect,props,mounting,updating,unmounting,rendering,one-way binding,faster and easy to scale,less size)
+
+typeScript
+-----------
+(superSet js,microsoft,npm typescript,compile tsc and run node ,type interface,dataTypes ,any,unknown,multi datatype,oops inheritance and interface,exports,accessSpecifiers,compileTime exec)
+
+REST
+https://blog.hubspot.com/website/what-is-rest-api
+----
+(standard way,client-server,no states,common interface(http),caching,no lang dependency,light weight,scalable,can send code as well,simple,soap is protocal(only xml),apikeys,layered(lb,apigw))
+
+Oauth
+https://www.sailpoint.com/identity-library/difference-between-authentication-and-authorization/
+-----
+(open Authorization framework to consent fo one application using another app behalf of you by providing access token,passport,googleAuth startegy)
+
+Java
+https://www.javatpoint.com/internal-details-of-hello-java-program
+-----
+(object oriented,robust,more secure and fast progrmaing lan and platform,wora,platform independent,JVM,JRM,bytecode,classloader,byteVerifier,interpreter,JIT,exec
+garabageCollector,jdk,SE(games,antivirus),EE(web),ME(android),embeded systems,multiThread,static blocks(owns class),heap,stackMem,class,object,constructor,abstraction,
+encapsulation,inheritance(reusablity,is-a),polymorphism(redablity),(oops-set of rules for dev and maintain),agregation(emp has address),interface(has-a),bankIntrest(overriding),addition(overloading)
+super,wrapper(autobox,unbox),collections(framework for obj-list,array,map,linkedlist,stack,queue),threads(sub-process,same mem,can communicate,only-one at time,start,run,resume,abort,schedulers,locks,startvation,roundRobin))
+
+
+SOLID Principles
+https://www.xenonstack.com/blog/solid-principles-javascript 
+https://duncan-mcardle.medium.com/solid-principle-2-open-closed-javascript-fc49b577a377
+------
+(reliable,maintain,reusablity,single-responsiblity(module or class,low coupling,car-errLog ex),open-closed(open for extended not updated,avoid,nested cond,vehicle,getRange ex),liskov substitution(superclass obj should repl baseclass obj(shape,rectangle,square))
+,interface-segregation(show only what needed for clients),dependencyInversion(no dependency.use abstarct (pay(pay)->gpay,phonepay,paymentHandler,purchase)))
+
+MYSQL
+https://www.w3schools.com/sql/sql_null_values.asp
+-----
+(ms access,oracle,mysql,my sql server(microsoft),database,dbms,sql,ddl,dml,dcl,tcl,aggregate fun(min,max,avg,count),orderBy,groupBy,constraints(notnull,unique,default,primary,foreign,check,autoincrement,unique),like,between,and,or,in,joins(self,inner,outerleft,right)
+drop,alter,update,delete,view,procedure(create,go,exec,@),select,insertInto select,selectInto(copy),create backup,having,isnull,isnotnull,case,exists,union,alias,wildcards,ifnull,use params@(execute()) for sql attack)
+
+Alogorithms
+-----------
+(algorithm,time,space,(linear,quadratic,log,constant),fibonacci,prime,factorial,recursion,search(linearSearch,binarySearch),sorting(bubble,insertion,quick,merge,selection),misc(cartesion,staircase,towerofhanoi),
+bruteForce(linearSerach),divide-conquer(binary,merge,quick),greedy(dijikstra,prims,kruskal),dynamicPrograming(fibonacci,staircase),backtracking(N-queens))
+
+Data Structures
+---------------
+(handling data efficiently ,storing,retrieveing,searching,inbuilt(array,map,object,set),custom(abstract(stack,queue,circular),sequential(linkedList,doubly,hash),hierarchial(trees,bt,bst),non-linear(graphs(directed,undirected,list,matrix)))
+BTS(DFS-inorder,preOrder,postOrder,BFS,insert,insertNode,node,root,left,right,value,head,tail))
+
+

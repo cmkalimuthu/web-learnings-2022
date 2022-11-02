@@ -1,0 +1,12 @@
+Proficiency in creating web applications and RESTful APIs./Proficiency in REST APIs, JSON, and API development
+Experience working in NoSQL and MYSQL databases is required.
+Proficient understanding of code versioning tools, such as Git/Bitbucket.
+serverless or micro-services 5 Experience with AWS or Azure or Google cloud technologies
+Understanding of front-end technologies, such as HTML5 CSS3 and JS frameworks like Angular 2+ or React Js / Basic knowledge of frontend frameworks such as Angular & React
+Experience with performing QA tests alongside development
+Experience deploying Node.js applications into production.
+Knowledge of Amazon Web Services (AWS) infrastructure, and project deployment with the pipeline.
+ Strong proficiency with JavaScript
+Completed B.Tech in Information Technology, at Sri Krishna College of Engineering and Technology with an aggregate 82% [2017– 2021] 
+Class 12 in Arul Malar Matric Higher Secondary School with aggregate 83% [2016-2017]
+Class 10 in Arul Malar Matric Higher Secondary School with aggregate 87% [2014-2015].

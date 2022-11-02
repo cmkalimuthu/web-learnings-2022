@@ -1,0 +1,71 @@
+department table creation
+----------------------------
+create table Department (department_id int,department_name varchar(30),department_block_number int, PRIMARY KEY (department_id))
+
+->insertion in table department
+
+INSERT INTO `department`(`department_id`, `department_name`, `department_block_number`) VALUES (1,"IT",1) ;
+INSERT INTO `department`(`department_id`, `department_name`, `department_block_number`) VALUES (2,"MECH",2);
+INSERT INTO `department`(`department_id`, `department_name`, `department_block_number`) VALUES (3,"CSE",3) ;
+INSERT INTO `department`(`department_id`, `department_name`, `department_block_number`) VALUES (4,"ECE",4) ;
+
+
+student table creation
+-------------------------
+create table Student (student_id int,student_name varchar(30) ,address varchar(40),city varchar(20),department_id int, PRIMARY KEY (student_id) ,FOREIGN KEY (department_id) REFERENCES department(department_id))
+
+->insertion in table student
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (1,"kali","annanagar","madurai",1);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (2,"ajith","lakshmimills","coimbatore",1);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (3,"pandy","kovaipudur","coimbatore",1);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (4,"tutu","kuniyamuthur","coimbatore",2);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (5,"sri","kuniyamuthur-1","coimbatore",3);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (6,"sakthi","kuniyamuthur-1","coimbatore",3);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (7,"sabarish","kuniyamuthur-1","coimbatore",3);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (8,"ismail","kuniyamuthur-1","coimbatore",4);
+INSERT INTO `student`(`student_id`, `student_name`, `address`, `city`, `department_id`) VALUES (9,"prendra","kuniyamuthur-1","coimbatore",4);
+
+ans :
+SELECT department_name ,NUMBER_OF_STUDENTS from (select department_name, count(student.student_name)as NUMBER_OF_STUDENTS from department inner join student where student.department_id =department.department_id group by department.department_name ) as users where NUMBER_OF_STUDENTS >1 ORDER BY department_name
+oracle : WITH users as (select department_name, count(student.student_name)as NUMBER_OF_STUDENTS from department inner join student on student.department_id =department.department_id group by department.department_name );
+SELECT department_name ,NUMBER_OF_STUDENTS from users where NUMBER_OF_STUDENTS >1 ORDER BY department_name
+
+course table creation 
+----------------------
+create table Course (courseid int(4),CourseName varchar(20),Duration int(2),Fees decimal(7,2)
+->insertion in table course
+INSERT INTO `course`(`courseid`, `CourseName`, `Duration`, `Fees`) VALUES (1,"IT",4,10000);
+INSERT INTO `course`(`courseid`, `CourseName`, `Duration`, `Fees`) VALUES (2,"mech",4,20000);
+INSERT INTO `course`(`courseid`, `CourseName`, `Duration`, `Fees`) VALUES (3,"ece",4,25000);
+
+ans oracle :
+1 . WITH sorted as (SELECT courseid, CourseName,rownum as rf FROM `course`  ORDER by fees desc  )
+select courseid, CourseName from sorted  where  rf=3  ORDER BY courseid 
+
+2. select courseid, CourseName from (SELECT `courseid`, `CourseName` FROM `course`  ORDER by fees desc  ) where  rownum=3  ORDER BY courseid ;
+
+ans sql :
+select courseid, CourseName from course order by fees desc limit 1 OFFSET 2
+
+town table creation 
+-------------------
+create table town (townID int,townname varchar(30),summertemp int,wintertemp int, PRIMARY KEY (townID))
+
+->insertion in table town
+INSERT INTO `town`(`townID`, `townname`, `summertemp`, `wintertemp`) VALUES (1,"madurai",25,25);
+INSERT INTO `town`(`townID`, `townname`, `summertemp`, `wintertemp`) VALUES (2,"coimbatore",24,20);
+INSERT INTO `town`(`townID`, `townname`, `summertemp`, `wintertemp`) VALUES (3,"ooty",20,24)
+
+
+ans sql & oracle :
+SELECT `townname`, `wintertemp`,
+CASE WHEN `wintertemp` > 25 THEN 'High Temperature'
+WHEN `wintertemp` >= 23 && `wintertemp` <=25  THEN 'Medium Temperature'
+ELSE 'Low Temperature'
+END AS QuantityText
+FROM town
+;
+
+
+
+
