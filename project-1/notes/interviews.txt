@@ -1,4 +1,4 @@
-1.LabCorp:
+1.LabCorp: oct-10
 Time:45 min ,
 basic : frontEnd,backend,database,project,situation,social activities,js programs,angular,testing,typescript,cloud,Rest,apis
 
@@ -20,3 +20,26 @@ js codes
 project difficulties
 social activities
 salary 7
+no replay due to salary
+situation -  answered all the question in a well explained manner
+
+
+company nov-5
+selfIntro,nodejs,es6,promise,await,async,sync,promiseAll,singleThreaded,map,filter,callback,subQueries,trigger,procedures,left and right joins
+curd opertion using node js (did book api using arrays instead of moongose) 
+time:45 min
+salary :expected 8
+fullstack developer but asked questions on backend 
+no -replay reason not mentioned
+situation - excelent hands on curd and answerd all the questions
+
+tcl nov-9
+selfIntro,project,apis,Rest,jwt,oAuth,scopes,grant,troubleshoot,apigee,policies,kibana ELK,testing,loadTesting,path,query,GET
+json,xml,web server,why left the job,will you work on other technologies,what tech you learned for past three months,notice period
+situation : answered all the questions
+time-30 min
+salary : expected 8 not sure 
+
+
+
+
