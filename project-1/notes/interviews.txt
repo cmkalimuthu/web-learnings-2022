@@ -33,12 +33,19 @@ fullstack developer but asked questions on backend
 no -replay reason not mentioned
 situation - excelent hands on curd and answerd all the questions
 
-tcl nov-9
+tcl nov-9 first round technical
 selfIntro,project,apis,Rest,jwt,oAuth,scopes,grant,troubleshoot,apigee,policies,kibana ELK,testing,loadTesting,path,query,GET
 json,xml,web server,why left the job,will you work on other technologies,what tech you learned for past three months,notice period
 situation : answered all the questions
 time-30 min
 salary : expected 8 not sure 
+
+tcl nov-10 second round technical+HR
+selfIntro,parents working,brother,project,REST apis ,standards follow(security,pagination,swagger,doos,RateLimit),why left,
+last date,relocate,storyPoints,unit test case,acceptance criteria,api platforms,
+duration :30 min
+situation - answered all the answers in best way.
+TCL selected and accepted the offer due to market and recession.
 
 
 
